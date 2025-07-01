@@ -1,0 +1,33 @@
+{
+    "name": "live-api-explorer",
+    "displayName": "Live API Explorer",
+    "description": "Explore internal APIs and generate usage stubs with chat + Copilot",
+    "version": "0.1.0",
+    "publisher": "your-org",
+    "engines": {
+      "vscode": "^1.80.0"
+    },
+    "activationEvents": ["onCommand:liveApiExplorer.chat"],
+    "main": "./out/extension.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "liveApiExplorer.chat",
+          "title": "Ask Live API Explorer"
+        }
+      ]
+    },
+    "scripts": {
+      "build": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "prepublish": "npm run build"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.80.0",
+      "typescript": "^5.0.0"
+    },
+    "dependencies": {
+      "@apidevtools/swagger-parser": "^10.0.2"
+    }
+  }
+  
